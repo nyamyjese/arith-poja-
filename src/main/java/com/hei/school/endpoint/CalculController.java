@@ -8,29 +8,29 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class CalculController {
-    private final CalculService calculService;
+  private final CalculService calculService;
 
-    public CalculController(CalculService calculService) {
-        this.calculService = calculService;
-    }
+  public CalculController(CalculService calculService) {
+    this.calculService = calculService;
+  }
 
-    @GetMapping("/add")
-    public ResponseEntity<Integer> add(@RequestParam int a, @RequestParam int b){
-        return ResponseEntity.ok(calculService.add(a,b));
-    }
+  @GetMapping("/add")
+  public ResponseEntity<Integer> add(@RequestParam int a, @RequestParam int b) {
+    return ResponseEntity.ok(calculService.add(a, b));
+  }
 
-    @GetMapping("/sub")
-    public ResponseEntity<Integer> sub(@RequestParam int a, @RequestParam int b){
-        return ResponseEntity.ok(calculService.sub(a,b));
-    }
+  @GetMapping("/sub")
+  public ResponseEntity<Integer> sub(@RequestParam int a, @RequestParam int b) {
+    return ResponseEntity.ok(calculService.sub(a, b));
+  }
 
-    @GetMapping("/mul")
-    public ResponseEntity<Integer> mul(@RequestParam int a, @RequestParam int b){
-        return ResponseEntity.ok(calculService.mul(a,b));
-    }
+  @GetMapping("/mul")
+  public ResponseEntity<Integer> mul(@RequestParam int a, @RequestParam int b) {
+    return ResponseEntity.ok(calculService.mul(a, b));
+  }
 
-    @GetMapping("/div")
-    public ResponseEntity<Integer> div(@RequestParam int a, @RequestParam int b){
-        return ResponseEntity.ok(calculService.div(a,b));
-    }
+  @GetMapping("/div")
+  public ResponseEntity<Integer> div(@RequestParam int a, @RequestParam int b) {
+    return ResponseEntity.ok(calculService.div(a, b));
+  }
 }
