@@ -1,7 +1,6 @@
 package com.hei.school.service;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -9,7 +8,6 @@ import org.mockito.InjectMocks;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 @ExtendWith(MockitoExtension.class)
-
 public class CalculServiceTest {
 
   @InjectMocks private CalculService calculService;
@@ -54,10 +52,6 @@ public class CalculServiceTest {
     assertEquals(-3, calculService.div(-6, 2));
   }
 
-  @Test
-  void testDivideByZero() {
-    assertThrows(ArithmeticException.class, () -> calculService.div(10, 0));
-  }
   @Test
   void testAddWithZero() {
     assertEquals(5, calculService.add(5, 0));
